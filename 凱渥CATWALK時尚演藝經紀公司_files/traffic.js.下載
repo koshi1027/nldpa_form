@@ -1,0 +1,33 @@
+$(function() {
+    
+    //if (document.referrer !== window.location.href) {
+    if (getHostName(document.referrer) !== getHostName(window.location.href)) {
+
+       Cookies.set('refererUrl', document.referrer);
+       Cookies.set('targetUrl', window.location.href);
+
+        
+        $.get('https://jsonip.com/', function(result){  
+
+        	$.ajax({
+				type : "POST",
+				url : 'https://wms.iftek.com.tw/mars/traffic/log',
+				data : JSON.stringify({
+					refererUrl:document.referrer,
+					targetUrl:window.location.href,
+					ip:result.ip
+				}),
+				contentType: "application/json; charset=utf-8",
+				success :function(result){},
+				error : null
+			});
+        });
+        
+    }
+
+    function getHostName(url) {
+        const host = url.match(/:\/\/(.[^/]+)/);
+        return host ? host[1] : null;
+    }
+
+})

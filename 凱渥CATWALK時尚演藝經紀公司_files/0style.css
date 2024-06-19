@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{text-align: center;margin: 0;}
+.fluid{padding: 50px 0;}
+.fluid,.formborder{max-width:1000px;margin:auto;}
+.logo{max-width: 150px; padding: 20px; margin: 20px 0;}
+h1{margin-top: 0px}
+img{width: 100%;}
+
+.formborder {				
+	width: calc(100% - 40px);
+	border-radius: 10px;
+    background: #fafafab3;
+    color: #565656;
+    text-align: left;
+    padding-bottom: 20px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+}
+
+.formborder h2 {
+	margin: 0;
+    padding: 20px 0;
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+.formstyle>div:last-child {
+	border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.formstyle>div:nth-child(2) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.formstyle>strong {
+    padding: 10px 5px;
+    display: block;
+}
+.formstyle>div {
+    background: #fff;
+    margin-bottom: 1px;
+    padding: 10px 20px;
+}
+	
+
+.formstyle t {
+	width: 100px;
+    display: inline-block;
+    border-right: 1px solid #ccc;
+    margin-right: 10px;
+}
+	
+r,red {
+	color: red;
+}
+.formstyle input, .formstyle select, .formstyle textarea {
+    border: 0;
+    width: calc(100% - 135px);
+}
+
+
+.formstyle input:focus, .formstyle select:focus, .formstyle textarea:focus {
+    outline: none;
+}
+		
+.formstyle label input {
+    width: auto;
+}
+			
+.formstyle label {
+    width: 118px;
+    padding: 3px;
+    display: inline-block;
+}
+
+
+input, select,textarea {
+	padding: 7px 10px;
+	border-radius: 5px;
+	border: solid 1px #59766d;
+	font-size: 15px;
+}
+
+#btnSubmit {
+    padding: 10px 0px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4d4d4dc2;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin: 20px;
+    display: block;
+	text-decoration: none;
+	transition: all 300ms;
+}
+
+#btnSubmit:hover {background-color: #4d4d4d;}
+.product label{ 
+	max-width: 156px; 
+	width: 100%;
+	border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 2px rgb(0 0 0 / 20%);
+	vertical-align: top;
+}
+.product input,.product label span,.product label img{display: inline-block;vertical-align: middle}
+.product label div{text-align: center;}
+.product label img{width: calc(100% - 25px)}
+.product label .num {border: 1px solid #E3E3E3;width: 40px;margin-right:5px}
+
+@media screen and (max-width:465px){
+	.product label{ max-width: 109px;}
+}
+			
+.photobox{
+	max-width: 1200px;margin:auto;padding: 0 20px 50px;
+}
+.photobox>div{
+	display: inline-block;
+	width:calc(30% - 10px);
+	margin: 0px 15px 20px 0;
+	height: 250px;
+	overflow: hidden;
+}
+.photobox>div img{
+	    height: 100%;
+	object-fit: cover;
+	object-position: center center;
+}
+.photobox>div:nth-child(3n){
+	margin-right: 0px;	
+}
+
+
+@media screen and (max-width:700px){
+	.photobox>div{
+		width:100%;
+	margin-right: 0px;	
+	}
+}
+
+
